@@ -1,10 +1,12 @@
 package com.pluralsight.streams;
 
+import StreamsPart2.Person;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Program {
+public class Program1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -24,16 +26,16 @@ public class Program {
         System.out.print("Enter a first or last name to search: ");
         String searchName = scanner.nextLine().trim().toLowerCase();
 
-        // Step 3: Search manually
+
         List<Person> matchedPeople = new ArrayList<>();
         for (Person person : people) {
-            if (person.getFirstname().toLowerCase().contains(searchName) ||
-                    person.getFirstname().toLowerCase().contains(searchName)) {
+            if (person.getfirstName().toLowerCase().contains(searchName) ||
+                    person.getlastName().toLowerCase().contains(searchName)) {
                 matchedPeople.add(person);
             }
         }
 
-        // Step 4: Display results
+
         if (matchedPeople.isEmpty()) {
             System.out.println("No matches found for \"" + searchName + "\".");
         } else {
@@ -43,7 +45,7 @@ public class Program {
             }
         }
 
-        // Step 5: Calculate stats
+
         int totalAge = 0;
         int oldest = Integer.MIN_VALUE;
         int youngest = Integer.MAX_VALUE;
@@ -65,17 +67,5 @@ public class Program {
         scanner.close();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 

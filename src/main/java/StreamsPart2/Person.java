@@ -1,21 +1,21 @@
-package com.pluralsight.streams;
+package StreamsPart2;
 
 public class Person {
-    static String FirstName;
+    static String firstName;
     static String lastName;
     int age;
 
     public Person(String firstname, String lastname, int age) {
-        this.FirstName = firstname;
+        this.firstName = firstname;
         this.lastName = lastname;
         this.age = age;
     }
 
-    public static String getFirstname() {
-        return FirstName;
+    public static String getfirstName() {
+        return firstName;
     }
 
-    public static String getLastname() {
+    public static String getlastName() {
         return lastName;
     }
 
@@ -25,6 +25,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return FirstName + " " + lastName + " (Age: " + age + ")";
+        return firstName + " " + lastName + " (Age: " + age + ")";
     }
 }
