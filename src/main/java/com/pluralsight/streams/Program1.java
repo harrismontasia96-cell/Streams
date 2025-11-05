@@ -29,8 +29,8 @@ public class Program1 {
 
         List<Person> matchedPeople = new ArrayList<>();
         for (Person person : people) {
-            if (person.getfirstName().toLowerCase().contains(searchName) ||
-                    person.getlastName().toLowerCase().contains(searchName)) {
+            if (person.getFirstName().toLowerCase().contains(searchName) ||
+                    person.getLastName().toLowerCase().contains(searchName)) {
                 matchedPeople.add(person);
             }
         }

@@ -1,21 +1,21 @@
 package StreamsPart2;
 
 public class Person {
-    static String firstName;
-    static String lastName;
+    private String firstName;
+    private String lastName;
     int age;
 
-    public Person(String firstname, String lastname, int age) {
-        this.firstName = firstname;
-        this.lastName = lastname;
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
     }
 
-    public static String getfirstName() {
+    public  String getFirstName() {
         return firstName;
     }
 
-    public static String getlastName() {
+    public  String getLastName() {
         return lastName;
     }
 

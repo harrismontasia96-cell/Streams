@@ -28,13 +28,14 @@ public class Program {
 
 
         List<Person> matchedPeople = people.stream()
-                .filter(p -> p.getfirstName().toLowerCase().contains(searchName)
-                        || p.getlastName().toLowerCase().contains(searchName))
+                .filter(p -> p.getFirstName().toLowerCase().contains(searchName)
+                        || p.getLastName().toLowerCase().contains(searchName))
                 .collect(Collectors.toList());
 
 
 
-        // Step 4: Display results
+
+        //  Display results
         if (matchedPeople.isEmpty()) {
             System.out.println("No matches found for \"" + searchName + "\".");
         } else {
@@ -42,12 +43,11 @@ public class Program {
            matchedPeople.forEach(System.out::println);
             }
 
-
         double averageAge = people.stream()
                 .map(Person::getAge)
                 .reduce(0, Integer::sum) / (double) people.size();
 
-        // Step 4: Find oldest and youngest using Stream
+        // Oldest and youngest using Stream
         int oldest = people.stream()
                 .map(Person::getAge)
                 .max(Integer::compare)
